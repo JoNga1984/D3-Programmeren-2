@@ -124,23 +124,28 @@ var svg = d3.select('#rondje').on('click', function() {
 
 	d3.select('#knop').on('click', function() {
 	
-	d3.select('.chart').selectAll('div').data(data).transition().style("width", function(d) { return bars(d) + "px";}).duration(1000);
-	
+	d3.select('.chart')
+	.selectAll('div')
+	.data(data).transition()
+	.style("width", function(d) { return bars(d) + "px";})
+	.duration(1000);.text(function(d) { return d});
 	});
+	
 	d3.select('#knop1').on('click', function() {
-	d3.select('.chart').selectAll('div').data(data2).transition().style("width", function(d) { return bars(d) + "px";}).duration(1000).text(function(d) { return d});
+	d3.select('.chart')
+	.selectAll('div')
+	.data(data2).transition()
+	.style("width", function(d) { return bars(d) + "px";})
+	.duration(1000).text(function(d) { return d});
 	});
 	
 	d3.select('#knop2').on('click', function() {
-	d3.select('.chart').selectAll('div').data(data3).transition().style("width", function(d) { return bars(d) + "px";}).duration(1000).text(function(d) { return d});
-	
+	d3.select('.chart')
+	.selectAll('div')
+	.data(data3).transition()
+	.style("width", function(d) { return bars(d) + "px";})
+	.duration(1000).text(function(d) { return d});
 	});
-	
-	
-
-	
-
-
 	
 	
 </script>
